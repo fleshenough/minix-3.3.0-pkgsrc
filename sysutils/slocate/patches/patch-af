@@ -2,7 +2,7 @@ $NetBSD: patch-af,v 1.1 2012/12/12 15:24:17 wiz Exp $
 
 Don't hardcode CFLAGS or CC.
 
---- src/Makefile.orig	2007-11-17 13:35:02.000000000 +0100
+--- src/Makefile.orig	Tue Dec 20 07:47:03 2005
 +++ src/Makefile
 @@ -1,13 +1,13 @@
  OBJS=slocate.o cmds.o conf.o utils.o

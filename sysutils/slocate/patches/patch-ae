@@ -2,9 +2,9 @@ $NetBSD: patch-ae,v 1.1 2012/12/12 15:24:17 wiz Exp $
 
 Remove this block if FNM_CASEFOLD is not set.
 
---- src/utils.c.orig	2007-11-17 13:22:15.000000000 +0100
+--- src/utils.c.orig	Fri Jan  6 00:16:19 2006
 +++ src/utils.c
-@@ -139,6 +139,7 @@ int match(struct g_data_s *g_data, char 
+@@ -139,6 +139,7 @@ int match(struct g_data_s *g_data, char *full_path, ch
  	    ret = 1;		
  
  EXIT:
