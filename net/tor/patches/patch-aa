@@ -20,7 +20,7 @@ put into NetBSD 5.1 (and SSL_OP_ALLOW_UNSAFE_RENEGOTIATION defined in
 ssl.h) so that this patch would be unnecessary.
 [2. text/plain; nbsd51-reneg]
 
---- src/common/tortls.c.orig	2012-11-19 21:24:54.000000000 +0000
+--- src/common/tortls.c.orig	Mon Nov 19 21:24:54 2012
 +++ src/common/tortls.c
 @@ -477,6 +477,17 @@ tor_tls_init(void)
       * program should be allowed to use renegotiation unless it first passed
