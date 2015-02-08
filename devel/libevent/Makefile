@@ -33,5 +33,12 @@ CONFIGURE_ENV+=		ac_cv_func_strtoll=yes
 CPPFLAGS+=		-Dstrtoll=__strtoll
 .endif
 
+PTHREAD_OPTS+= native
+.include "../../mk/pthread.buildlink3.mk"
+
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
+. include "../../devel/pth/buildlink3.mk"
+.endif
+
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
